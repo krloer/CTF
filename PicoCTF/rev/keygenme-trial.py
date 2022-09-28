@@ -154,8 +154,6 @@ def check_key(key, username_trial):
 
             i += 1
 
-        print(key[i])
-        print(hashlib.sha256(username_trial).hexdigest()[4])
 
         # TODO : test performance on toolbox container
         # Check dynamic part --v
