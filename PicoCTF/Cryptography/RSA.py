@@ -9,6 +9,7 @@ q = 674357869540600933870145899564746495319033
 phi = (p-1)*(q-1)
 
 d=inverse(e, phi)
+# e = inverse(d, phi) -reverse
 
 m = pow(c,d,n)
 flag = long_to_bytes(m)
