@@ -1,4 +1,11 @@
 const _0x402c = ['value', '2wfTpTR', 'instantiate', '275341bEPcme', 'innerHTML', '1195047NznhZg', '1qfevql', 'input', '1699808QuoWhA', 'Correct!', 'check_flag', 'Incorrect!', './JIFxzHyW8W', '23SMpAuA', '802698XOMSrr', 'charCodeAt', '474547vVoGDO', 'getElementById', 'instance', 'copy_char', '43591XxcWUl', '504454llVtzW', 'arrayBuffer', '2NIQmVj', 'result'];
+/*
+wasm file = ./JIFxzHyW8W
+mercury.picoctf.net:55336/JIFxzHyW8W
+view hex
+
+use js deobfuscator next time, js nice
+*/
 const _0x4e0e = function(_0x553839, _0x53c021) {
     _0x553839 = _0x553839 - 0x1d6; // - 470
     let _0x402c6f = _0x402c[_0x553839];
@@ -21,15 +28,17 @@ let exports;
     const _0x48c3be = _0x4e0e;
     let _0x5f0229 = await fetch(_0x48c3be(0x1e9)),
         _0x1d99e9 = await WebAssembly[_0x48c3be(0x1df)](await _0x5f0229[_0x48c3be(0x1da)]()),
+                    // await WebAssembly.instantiate(await ./JIFxzHyW8W)
         _0x1f8628 = _0x1d99e9[_0x48c3be(0x1d6)];
     exports = _0x1f8628['exports'];
 })();
 
 function onButtonPress() {
-    const _0xa80748 = _0x4e0e; // some value from the array
-    let _0x3761f8 = document['getElementById'](_0xa80748(0x1e4))[_0xa80748(0x1dd)];
-    for (let _0x16c626 = 0x0; _0x16c626 < _0x3761f8['length']; _0x16c626++) {
-        exports[_0xa80748(0x1d7)](_0x3761f8[_0xa80748(0x1ec)](_0x16c626), _0x16c626);
+    const _0xa80748 = _0x4e0e; // the whole array
+    let _0x3761f8 = document['getElementById'](_0xa80748(0x1e4))[_0xa80748(0x1dd)]; // input value
+    for (let _0x16c626 = 0x0; _0x16c626 < _0x3761f8['length']; _0x16c626++) { // loop 25 times
+        exports[_0xa80748(0x1d7)](_0x3761f8[_0xa80748(0x1ec)](_0x16c626), _0x16c626); //function from exports(input.charCodeAt(0>25), input)
     }
     exports['copy_char'](0x0, _0x3761f8['length']), exports[_0xa80748(0x1e7)]() == 0x1 ? document[_0xa80748(0x1ee)](_0xa80748(0x1dc))[_0xa80748(0x1e1)] = _0xa80748(0x1e6) : document[_0xa80748(0x1ee)](_0xa80748(0x1dc))[_0xa80748(0x1e1)] = _0xa80748(0x1e8);
+    //exports[copy_char], check_flag() == 1 ? document.getElementbyId(result).innerHTML = Correct! : Incorrect!
 }
