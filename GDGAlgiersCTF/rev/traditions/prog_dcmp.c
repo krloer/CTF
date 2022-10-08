@@ -54,11 +54,11 @@ undefined8 main(void)
   uint local_20;
   int i;
   
-  local_e8[0] = 0x15;
+  local_e8[0] = 0x15; 
   local_e8[1] = 0x91;
   local_e8[2] = 0x2a;
   local_e8[3] = 0x59;
-  local_d8 = 0x72;
+  local_d8 = 0x72; //confused decompile, these are array values in order
   local_d4 = 0x1e;
   local_d0 = 0xd9;
   local_cc = 10;
@@ -113,16 +113,16 @@ undefined8 main(void)
   i = 0;
   while( true ) {
     uVar3 = (ulong)i;
-    sVar2 = strlen(input); 47
-    if (sVar2 <= uVar3) {//if 47 chars passed
+    sVar2 = strlen(input); //47
+    if (sVar2 <= uVar3) { //if 47 chars passed
       puts("Correct, you can submit the flag");
       return 0;
     }
-    iVar1 = rand(); // 1341262422
-    local_20 = (uint)(iVar1 >> 0x1f) >> 0x18; // 0
-    local_20 = (iVar1 + local_20 & 0xff) - local_20; // 1341262422 + 0 & 255 = 01010110 (86)
-    local_24 = (int)input[i] ^ local_20; // ascii val of input[i] ^ 01010110
-    if (local_24 != local_e8[i]) break; //21, 145, 42, 89
+    iVar1 = rand(); // rand value (first time: 1341262422)
+    local_20 = (uint)(iVar1 >> 0x1f) >> 0x18; // always 0
+    local_20 = (iVar1 + local_20 & 0xff) - local_20; // rand value (+ 0) & 255 (first time: 01010110 (86))
+    local_24 = (int)input[i] ^ local_20; // ascii val of input[i] ^ local_20
+    if (local_24 != local_e8[i]) break; //21, 145, 42, 89 ...
     i = i + 1;
   }
   printf("WRONG");
