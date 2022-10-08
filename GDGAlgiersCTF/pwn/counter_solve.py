@@ -5,7 +5,7 @@ r = remote("pwn.chal.ctf.gdgalgiers.com", 1402)
 
 charsize = 255
 
-payload = charsize*b'1aaaaaaaaaaaaaaaaaaaaaa'
+payload = charsize*b'1aaaaaaaaaaaaaaaaaaaaaa' #1 + 22 a's
 r.recvuntil(b"Choice: ")
 r.sendline(payload)
 for i in range(charsize):
