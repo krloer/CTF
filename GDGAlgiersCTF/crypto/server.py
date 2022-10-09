@@ -10,8 +10,8 @@ def xor(message, key):
 
 
 def generate_key(length):
-    random_seed = os.urandom(16)
-    key = random_seed * (length //16) + random_seed[:(length % 16)]
+    random_seed = os.urandom(16) # 16 random bytes
+    key = random_seed * (length //16) + random_seed[:(length % 16)] # random_seed*8 (assuming input length 128)
     return key 
 
 
@@ -19,13 +19,13 @@ def generate_key(length):
 def main():
     print("Hello Stranger, send me your secret and I will make sure to roll it up")
     while True:
-        message = input('>> ').encode()
+        message = input('>> ').encode() #b'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
         if len(message)<20:
             print('That is not a secret man!')
             exit()
-        key = generate_key(len(message))
-        offset = random.randint(0, len(message))
-        cipher = xor(message[:offset]+FLAG+message[offset:], key)
+        key = generate_key(len(message)) # 128
+        offset = random.randint(0, len(message)) # places flag at random location in message
+        cipher = xor(message[:offset]+FLAG+message[offset:], key) #random_seed*8 xor message with flag in it
         print("> "+ cipher.encode().hex())
 
 

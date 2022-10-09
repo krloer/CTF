@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 int main() {
-    char input [48];
     unsigned int arr [47];
     int num;
     int l20;
@@ -62,14 +61,11 @@ int main() {
         num = rand();
         l20 = (unsigned int) (num >> 0x1f) >> 0x18;
 
-        int local_20 = 0;
-        local_20 = (num + local_20 & 0xff) - local_20; // 86 first time
-
-        p = arr[i] ^ local_20;
+        l20 = (num + l20 & 0xff) - l20; 
+        p = arr[i] ^ l20;
         char put = p;
 
         printf("%c", p);
-
         i++;
     } 
 
