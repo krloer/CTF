@@ -1,4 +1,4 @@
-	.arch armv8-a
+	.arch armv8-a ; 3964545182
 	.file	"chall_4.c"
 	.text
 	.align	2
@@ -7,17 +7,17 @@
 func1:
 	stp	x29, x30, [sp, -32]!
 	add	x29, sp, 0
-	str	w0, [x29, 28]
+	str	w0, [x29, 28] ; a_28 = w0
+	ldr	w0, [x29, 28] ; w0 = a_28
+	cmp	w0, 100 ; w0 < 100 ? 
+	bls	.L2 ; branch if less than
 	ldr	w0, [x29, 28]
-	cmp	w0, 100
-	bls	.L2
-	ldr	w0, [x29, 28]
-	add	w0, w0, 100
+	add	w0, w0, 100 ; w0 += 100
 	bl	func2
 	b	.L3
 .L2:
-	ldr	w0, [x29, 28]
-	bl	func3
+	ldr	w0, [x29, 28] w0 = a_28
+	bl	func3 ; call func 3(a_28)
 .L3:
 	ldp	x29, x30, [sp], 32
 	ret
@@ -28,13 +28,13 @@ func1:
 func2:
 	stp	x29, x30, [sp, -32]!
 	add	x29, sp, 0
-	str	w0, [x29, 28]
-	ldr	w0, [x29, 28]
-	cmp	w0, 499
-	bhi	.L5
-	ldr	w0, [x29, 28]
-	sub	w0, w0, #86
-	bl	func4
+	str	w0, [x29, 28] a_28 = w0
+	ldr	w0, [x29, 28] w0 = a_28
+	cmp	w0, 499 ; w0 > 499 ?
+	bhi	.L5 ; branch if higher than
+	ldr	w0, [x29, 28] ; w0 = a_28
+	sub	w0, w0, #86 ; w0 -= 86
+	bl	func4 ; call func 4
 	b	.L6
 .L5:
 	ldr	w0, [x29, 28]
@@ -50,9 +50,9 @@ func2:
 func3:
 	stp	x29, x30, [sp, -32]!
 	add	x29, sp, 0
-	str	w0, [x29, 28]
-	ldr	w0, [x29, 28]
-	bl	func7
+	str	w0, [x29, 28] ; a_28 = w0
+	ldr	w0, [x29, 28] ; w0 = a_28
+	bl	func7 ; call func 7(a_28)
 	ldp	x29, x30, [sp], 32
 	ret
 	.size	func3, .-func3
@@ -62,11 +62,11 @@ func3:
 func4:
 	stp	x29, x30, [sp, -48]!
 	add	x29, sp, 0
-	str	w0, [x29, 28]
-	mov	w0, 17
-	str	w0, [x29, 44]
-	ldr	w0, [x29, 44]
-	bl	func1
+	str	w0, [x29, 28] ; a_28 = w0
+	mov	w0, 17 ; w0 = 17
+	str	w0, [x29, 44] ; c_44 = 17
+	ldr	w0, [x29, 44] ; w0 = c_44 = 17
+	bl	func1 ; call func 1
 	str	w0, [x29, 44]
 	ldr	w0, [x29, 28]
 	ldp	x29, x30, [sp], 48
@@ -125,14 +125,14 @@ func6:
 	.type	func7, %function
 func7:
 	sub	sp, sp, #16
-	str	w0, [sp, 12]
-	ldr	w0, [sp, 12]
-	cmp	w0, 100
-	bls	.L18
-	ldr	w0, [sp, 12]
+	str	w0, [sp, 12] ; w0 = b_12
+	ldr	w0, [sp, 12] ; b_12 = w0
+	cmp	w0, 100 ; w0 < 100 ?
+	bls	.L18 ; branch if less than
+	ldr	w0, [sp, 12] w0 = b_12
 	b	.L19
 .L18:
-	mov	w0, 7
+	mov	w0, 7 ; w0 = 7
 .L19:
 	add	sp, sp, 16
 	ret
@@ -157,21 +157,27 @@ func8:
 	.global	main
 	.type	main, %function
 main:
+	; init
 	stp	x29, x30, [sp, -48]!
 	add	x29, sp, 0
 	str	w0, [x29, 28]
 	str	x1, [x29, 16]
 	ldr	x0, [x29, 16]
+
+	;take arg:
 	add	x0, x0, 8
 	ldr	x0, [x0]
 	bl	atoi
+
 	str	w0, [x29, 44]
 	ldr	w0, [x29, 44]
-	bl	func1
+
+	bl	func1 ; call func1
+
 	mov	w1, w0
 	adrp	x0, .LC0
 	add	x0, x0, :lo12:.LC0
-	bl	printf
+	bl	printf ; print output
 	nop
 	ldp	x29, x30, [sp], 48
 	ret
