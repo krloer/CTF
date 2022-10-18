@@ -1,0 +1,125 @@
+[Wed Jul 27 14:13:44.283797 2022] [ssl:error] [pid 24003] [client 165.227.73.138:51048] AH02031: Hostname easternstateuniversity.com provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:13:56.739437 2022] [ssl:error] [pid 23695] [client 165.227.73.138:48286] AH02031: Hostname easternstateuniversity.com provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:33.806288 2022] [ssl:error] [pid 23696] [client 165.227.73.138:60902] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:34.275640 2022] [ssl:error] [pid 23687] [client 165.227.73.138:60916] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:34.745712 2022] [ssl:error] [pid 19942] [client 165.227.73.138:50456] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:35.215417 2022] [ssl:error] [pid 19727] [client 165.227.73.138:50468] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:35.685077 2022] [ssl:error] [pid 23695] [client 165.227.73.138:50474] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:36.154243 2022] [ssl:error] [pid 23902] [client 165.227.73.138:50488] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:36.622290 2022] [ssl:error] [pid 23873] [client 165.227.73.138:50502] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:37.092996 2022] [ssl:error] [pid 20065] [client 165.227.73.138:50512] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:37.561669 2022] [ssl:error] [pid 24003] [client 165.227.73.138:50528] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:38.031151 2022] [ssl:error] [pid 24383] [client 165.227.73.138:50540] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:38.500055 2022] [ssl:error] [pid 23696] [client 165.227.73.138:50554] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:38.970888 2022] [ssl:error] [pid 23687] [client 165.227.73.138:50564] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:39.441521 2022] [ssl:error] [pid 19942] [client 165.227.73.138:50580] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:39.911287 2022] [ssl:error] [pid 19727] [client 165.227.73.138:50586] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:40.380423 2022] [ssl:error] [pid 23695] [client 165.227.73.138:50598] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:40.849372 2022] [ssl:error] [pid 23902] [client 165.227.73.138:50602] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:41.318438 2022] [ssl:error] [pid 23873] [client 165.227.73.138:50604] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:41.786411 2022] [ssl:error] [pid 20065] [client 165.227.73.138:50614] AH02031: Hostname 143.244.178.213 provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:17:49.031382 2022] [core:error] [pid 23687] [client 165.227.73.138:58346] AH00126: Invalid URI in request GET /../../../../../../../../../../../../etc/shadow HTTP/1.1
+[Wed Jul 27 14:18:14.390474 2022] [php7:error] [pid 23696] [client 165.227.73.138:34098] script '/var/www/easternstateuniversity.com/server.php' not found or unable to stat, referer: () { _; } >_[$($())] { echo 93e4r0-CVE-2014-6278: true; echo;echo; }
+[Wed Jul 27 14:18:17.494410 2022] [php7:error] [pid 23873] [client 165.227.73.138:42584] script '/var/www/easternstateuniversity.com/test_cgi.php' not found or unable to stat, referer: () { _; } >_[$($())] { echo 93e4r0-CVE-2014-6278: true; echo;echo; }
+[Wed Jul 27 14:18:18.009523 2022] [php7:error] [pid 20065] [client 165.227.73.138:42588] script '/var/www/easternstateuniversity.com/test.cgi.php' not found or unable to stat, referer: () { _; } >_[$($())] { echo 93e4r0-CVE-2014-6278: true; echo;echo; }
+[Wed Jul 27 14:18:26.295525 2022] [ssl:error] [pid 19727] [client 165.227.73.138:43740] AH02031: Hostname easternstateuniversity.com provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:18:27.328269 2022] [ssl:error] [pid 23902] [client 165.227.73.138:43766] AH02031: Hostname easternstateuniversity.com provided via SNI, but no hostname provided in HTTP request
+[Wed Jul 27 14:18:31.984384 2022] [php7:error] [pid 23695] [client 165.227.73.138:43864] script '/var/www/easternstateuniversity.com/splashAdmin.php' not found or unable to stat
+[Wed Jul 27 14:18:47.494091 2022] [php7:error] [pid 23695] [client 165.227.73.138:34962] script '/var/www/easternstateuniversity.com/forumdisplay.php' not found or unable to stat
+[Wed Jul 27 14:18:53.702679 2022] [php7:error] [pid 23873] [client 165.227.73.138:35068] script '/var/www/easternstateuniversity.com/profile.php' not found or unable to stat
+[Wed Jul 27 14:18:54.221833 2022] [php7:error] [pid 20065] [client 165.227.73.138:35084] script '/var/www/easternstateuniversity.com/ticket.php' not found or unable to stat
+[Wed Jul 27 14:20:06.696708 2022] [php7:error] [pid 20065] [client 165.227.73.138:41460] script '/var/www/easternstateuniversity.com/article.php' not found or unable to stat
+[Wed Jul 27 14:20:07.224996 2022] [php7:error] [pid 24003] [client 165.227.73.138:41470] script '/var/www/easternstateuniversity.com/blah123.php' not found or unable to stat
+[Wed Jul 27 14:20:08.776029 2022] [php7:error] [pid 23687] [client 165.227.73.138:41502] script '/var/www/easternstateuniversity.com/contents.php' not found or unable to stat
+[Wed Jul 27 14:20:09.297757 2022] [php7:error] [pid 19942] [client 165.227.73.138:41518] script '/var/www/easternstateuniversity.com/download.php' not found or unable to stat
+[Wed Jul 27 14:20:09.815269 2022] [php7:error] [pid 19727] [client 165.227.73.138:41524] script '/var/www/easternstateuniversity.com/download.php' not found or unable to stat
+[Wed Jul 27 14:20:10.849922 2022] [php7:error] [pid 23902] [client 165.227.73.138:41542] script '/var/www/easternstateuniversity.com/home.php' not found or unable to stat
+[Wed Jul 27 14:20:13.950350 2022] [php7:error] [pid 23687] [client 165.227.73.138:41582] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:20:14.466361 2022] [php7:error] [pid 19942] [client 165.227.73.138:41584] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:20:14.984191 2022] [php7:error] [pid 19727] [client 165.227.73.138:49390] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:20:15.500350 2022] [php7:error] [pid 23695] [client 165.227.73.138:49406] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:20:16.019336 2022] [php7:error] [pid 23902] [client 165.227.73.138:49414] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:22:03.513378 2022] [core:error] [pid 19942] [client 165.227.73.138:60438] AH00126: Invalid URI in request GET /../../../../../../../../../boot.ini HTTP/1.1
+[Wed Jul 27 14:22:04.029940 2022] [core:error] [pid 19727] [client 165.227.73.138:60454] AH00126: Invalid URI in request GET /../../../../winnt/repair/sam._ HTTP/1.1
+[Wed Jul 27 14:22:06.097066 2022] [core:error] [pid 20065] [client 165.227.73.138:33102] AH00126: Invalid URI in request GET ////./../.../boot.ini HTTP/1.1
+[Wed Jul 27 14:22:07.645602 2022] [php7:error] [pid 23696] [client 165.227.73.138:33126] script '/var/www/easternstateuniversity.com/autohtml.php' not found or unable to stat
+[Wed Jul 27 14:22:12.300719 2022] [core:error] [pid 24383] [client 165.227.73.138:33212] AH00126: Invalid URI in request GET /DomainFiles/*//../../../../../../../../../../etc/passwd HTTP/1.1
+[Wed Jul 27 14:22:13.337772 2022] [php7:error] [pid 23687] [client 165.227.73.138:33218] script '/var/www/easternstateuniversity.com/ezhttpbench.php' not found or unable to stat
+[Wed Jul 27 14:22:21.620861 2022] [php7:error] [pid 20065] [client 165.227.73.138:46884] script '/var/www/easternstateuniversity.com/phptonuke.php' not found or unable to stat
+[Wed Jul 27 14:22:23.688737 2022] [php7:error] [pid 23687] [client 165.227.73.138:46924] script '/var/www/easternstateuniversity.com/viewpage.php' not found or unable to stat
+[Wed Jul 27 14:22:28.865896 2022] [php7:error] [pid 23687] [client 165.227.73.138:58394] script '/var/www/easternstateuniversity.com/athenareg.php' not found or unable to stat
+[Wed Jul 27 14:22:31.455175 2022] [core:error] [pid 23873] [client 165.227.73.138:58458] AH00126: Invalid URI in request GET /../../../../../../../../../../etc/passwd HTTP/1.1
+[Wed Jul 27 14:22:33.524161 2022] [core:error] [pid 23696] [client 165.227.73.138:58488] AH00126: Invalid URI in request GET /%2E%2E/%2E%2E/%2E%2E/%2E%2E/%2E%2E/windows/win.ini HTTP/1.1
+[Wed Jul 27 14:22:34.043017 2022] [core:error] [pid 23687] [client 165.227.73.138:58490] AH00126: Invalid URI in request GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd HTTP/1.1
+[Wed Jul 27 14:22:40.765418 2022] [php7:error] [pid 23695] [client 165.227.73.138:43172] script '/var/www/easternstateuniversity.com/userinfo.php' not found or unable to stat
+[Wed Jul 27 14:22:55.767546 2022] [php7:error] [pid 19727] [client 165.227.73.138:37952] script '/var/www/easternstateuniversity.com/soinfo.php' not found or unable to stat
+[Wed Jul 27 14:22:56.288229 2022] [php7:error] [pid 23695] [client 165.227.73.138:37960] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:22:56.804607 2022] [php7:error] [pid 23902] [client 165.227.73.138:37962] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:22:57.321993 2022] [php7:error] [pid 23873] [client 165.227.73.138:37978] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:22:58.354865 2022] [php7:error] [pid 24003] [client 165.227.73.138:38002] script '/var/www/easternstateuniversity.com/addyoursite.php' not found or unable to stat
+[Wed Jul 27 14:23:05.605176 2022] [php7:error] [pid 19942] [client 165.227.73.138:35550] script '/var/www/easternstateuniversity.com/test.php' not found or unable to stat
+[Wed Jul 27 14:23:09.226751 2022] [php7:error] [pid 24383] [client 165.227.73.138:35620] script '/var/www/easternstateuniversity.com/z_user_show.php' not found or unable to stat
+[Wed Jul 27 14:23:11.295570 2022] [php7:error] [pid 19727] [client 165.227.73.138:35660] script '/var/www/easternstateuniversity.com/users.php' not found or unable to stat
+[Wed Jul 27 14:23:11.812625 2022] [php7:error] [pid 23695] [client 165.227.73.138:35670] script '/var/www/easternstateuniversity.com/usercp.php' not found or unable to stat
+[Wed Jul 27 14:23:12.329766 2022] [php7:error] [pid 23902] [client 165.227.73.138:35678] script '/var/www/easternstateuniversity.com/user.php' not found or unable to stat
+[Wed Jul 27 14:23:15.950100 2022] [php7:error] [pid 19942] [client 165.227.73.138:37904] script '/var/www/easternstateuniversity.com/sunshop.index.php' not found or unable to stat
+[Wed Jul 27 14:23:16.468764 2022] [php7:error] [pid 19727] [client 165.227.73.138:37914] script '/var/www/easternstateuniversity.com/submit.php' not found or unable to stat
+[Wed Jul 27 14:23:17.500981 2022] [php7:error] [pid 23902] [client 165.227.73.138:37936] script '/var/www/easternstateuniversity.com/showcat.php' not found or unable to stat
+[Wed Jul 27 14:23:21.632122 2022] [php7:error] [pid 19727] [client 165.227.73.138:37982] script '/var/www/easternstateuniversity.com/search.php' not found or unable to stat
+[Wed Jul 27 14:23:22.147685 2022] [php7:error] [pid 23695] [client 165.227.73.138:37994] script '/var/www/easternstateuniversity.com/search.php' not found or unable to stat
+[Wed Jul 27 14:23:22.665403 2022] [php7:error] [pid 23902] [client 165.227.73.138:38006] script '/var/www/easternstateuniversity.com/search.php' not found or unable to stat
+[Wed Jul 27 14:23:24.730478 2022] [php7:error] [pid 24383] [client 165.227.73.138:38876] script '/var/www/easternstateuniversity.com/replymsg.php' not found or unable to stat
+[Wed Jul 27 14:23:25.247466 2022] [php7:error] [pid 23696] [client 165.227.73.138:38884] script '/var/www/easternstateuniversity.com/profiles.php' not found or unable to stat
+[Wed Jul 27 14:23:27.315280 2022] [php7:error] [pid 23695] [client 165.227.73.138:38932] script '/var/www/easternstateuniversity.com/pms.php' not found or unable to stat
+[Wed Jul 27 14:23:27.830919 2022] [php7:error] [pid 23902] [client 165.227.73.138:38940] script '/var/www/easternstateuniversity.com/pm.php' not found or unable to stat
+[Wed Jul 27 14:23:30.930522 2022] [php7:error] [pid 23687] [client 165.227.73.138:39012] script '/var/www/easternstateuniversity.com/phptonuke.php' not found or unable to stat
+[Wed Jul 27 14:23:31.963351 2022] [php7:error] [pid 19727] [client 165.227.73.138:39038] script '/var/www/easternstateuniversity.com/phpinfo.php' not found or unable to stat
+[Wed Jul 27 14:23:32.996380 2022] [php7:error] [pid 23902] [client 165.227.73.138:39044] script '/var/www/easternstateuniversity.com/phpimageview.php' not found or unable to stat
+[Wed Jul 27 14:23:41.781328 2022] [php7:error] [pid 19942] [client 165.227.73.138:51170] script '/var/www/easternstateuniversity.com/myhome.php' not found or unable to stat
+[Wed Jul 27 14:23:46.432191 2022] [php7:error] [pid 23687] [client 165.227.73.138:60664] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:46.949540 2022] [php7:error] [pid 19942] [client 165.227.73.138:60670] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:47.465592 2022] [php7:error] [pid 19727] [client 165.227.73.138:60682] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:47.982621 2022] [php7:error] [pid 23695] [client 165.227.73.138:60692] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:48.501029 2022] [php7:error] [pid 23902] [client 165.227.73.138:60694] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:49.016513 2022] [php7:error] [pid 23873] [client 165.227.73.138:60706] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:49.533495 2022] [php7:error] [pid 20065] [client 165.227.73.138:60722] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:50.049626 2022] [php7:error] [pid 24003] [client 165.227.73.138:60738] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:50.565973 2022] [php7:error] [pid 24383] [client 165.227.73.138:60752] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:51.080739 2022] [php7:error] [pid 23696] [client 165.227.73.138:60758] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:51.600271 2022] [php7:error] [pid 23687] [client 165.227.73.138:60762] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:52.117471 2022] [php7:error] [pid 19942] [client 165.227.73.138:60768] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:52.632357 2022] [php7:error] [pid 19727] [client 165.227.73.138:60778] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:53.152228 2022] [php7:error] [pid 23695] [client 165.227.73.138:60782] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:53.668033 2022] [php7:error] [pid 23902] [client 165.227.73.138:60798] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:54.184283 2022] [php7:error] [pid 23873] [client 165.227.73.138:60814] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:54.699936 2022] [php7:error] [pid 20065] [client 165.227.73.138:46782] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:23:55.217232 2022] [php7:error] [pid 24003] [client 165.227.73.138:46790] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:24:04.533753 2022] [php7:error] [pid 23873] [client 165.227.73.138:46932] script '/var/www/easternstateuniversity.com/include.php' not found or unable to stat
+[Wed Jul 27 14:24:07.634027 2022] [php7:error] [pid 19942] [client 165.227.73.138:57328] script '/var/www/easternstateuniversity.com/friend.php' not found or unable to stat
+[Wed Jul 27 14:24:12.797923 2022] [php7:error] [pid 19942] [client 165.227.73.138:57398] script '/var/www/easternstateuniversity.com/download.php' not found or unable to stat
+[Wed Jul 27 14:24:13.314735 2022] [php7:error] [pid 19727] [client 165.227.73.138:57410] script '/var/www/easternstateuniversity.com/default.php' not found or unable to stat
+[Wed Jul 27 14:24:13.831765 2022] [php7:error] [pid 23695] [client 165.227.73.138:57422] script '/var/www/easternstateuniversity.com/default.php' not found or unable to stat
+[Wed Jul 27 14:24:14.864505 2022] [php7:error] [pid 23873] [client 165.227.73.138:37816] script '/var/www/easternstateuniversity.com/comments.php' not found or unable to stat
+[Wed Jul 27 14:24:18.485663 2022] [php7:error] [pid 19727] [client 165.227.73.138:37900] script '/var/www/easternstateuniversity.com/calendar.php' not found or unable to stat
+[Wed Jul 27 14:24:28.313691 2022] [php7:error] [pid 19942] [client 165.227.73.138:56390] script '/var/www/easternstateuniversity.com/profiles.php' not found or unable to stat
+[Wed Jul 27 14:24:28.831347 2022] [php7:error] [pid 19727] [client 165.227.73.138:56398] script '/var/www/easternstateuniversity.com/comment.php' not found or unable to stat
+[Wed Jul 27 14:24:32.453953 2022] [php7:error] [pid 23696] [client 165.227.73.138:56444] script '/var/www/easternstateuniversity.com/add_user.php' not found or unable to stat
+[Wed Jul 27 14:24:58.312997 2022] [php7:error] [pid 23696] [client 165.227.73.138:47356] script '/var/www/easternstateuniversity.com/admin.php' not found or unable to stat
+[Wed Jul 27 14:24:58.831021 2022] [php7:error] [pid 23687] [client 165.227.73.138:47368] script '/var/www/easternstateuniversity.com/admin.php' not found or unable to stat
+[Wed Jul 27 14:25:01.935341 2022] [php7:error] [pid 20065] [client 165.227.73.138:47418] script '/var/www/easternstateuniversity.com/dostuff.php' not found or unable to stat
+[Wed Jul 27 14:25:04.017988 2022] [php7:error] [pid 23687] [client 165.227.73.138:47430] script '/var/www/easternstateuniversity.com/agentadmin.php' not found or unable to stat
+[Wed Jul 27 14:25:14.934547 2022] [php7:error] [pid 19942] [client 165.227.73.138:53282] script '/var/www/easternstateuniversity.com/modules.php' not found or unable to stat
+[Wed Jul 27 14:25:41.176819 2022] [authz_core:error] [pid 19727] [client 165.227.73.138:33090] AH01630: client denied by server configuration: /var/www/easternstateuniversity.com/.hta
+[Wed Jul 27 14:25:41.293530 2022] [authz_core:error] [pid 19727] [client 165.227.73.138:33090] AH01630: client denied by server configuration: /var/www/easternstateuniversity.com/.hta_
+[Wed Jul 27 14:25:41.409880 2022] [authz_core:error] [pid 19727] [client 165.227.73.138:33090] AH01630: client denied by server configuration: /var/www/easternstateuniversity.com/.htaccess
+[Wed Jul 27 14:25:41.526323 2022] [authz_core:error] [pid 19727] [client 165.227.73.138:33090] AH01630: client denied by server configuration: /var/www/easternstateuniversity.com/.htaccess_
+[Wed Jul 27 14:25:41.643242 2022] [authz_core:error] [pid 19727] [client 165.227.73.138:33090] AH01630: client denied by server configuration: /var/www/easternstateuniversity.com/.htpasswd
+[Wed Jul 27 14:25:41.759934 2022] [authz_core:error] [pid 19727] [client 165.227.73.138:33090] AH01630: client denied by server configuration: /var/www/easternstateuniversity.com/.htpasswd_
+[Wed Jul 27 14:26:14.508250 2022] [php7:error] [pid 23902] [client 165.227.73.138:34640] script '/var/www/easternstateuniversity.com/admin.php' not found or unable to stat
+[Wed Jul 27 14:29:43.246636 2022] [php7:error] [pid 19727] [client 165.227.73.138:52586] script '/var/www/easternstateuniversity.com/info.php' not found or unable to stat
+[Wed Jul 27 14:31:31.077290 2022] [php7:error] [pid 19942] [client 165.227.73.138:60374] script '/var/www/easternstateuniversity.com/phpinfo.php' not found or unable to stat
+[Wed Jul 27 14:32:47.584904 2022] [authz_core:error] [pid 24003] [client 165.227.73.138:49348] AH01630: client denied by server configuration: /var/www/easternstateuniversity.com/server-status
+[Wed Jul 27 14:34:44.623678 2022] [php7:error] [pid 24003] [client 165.227.73.138:37282] script '/var/www/easternstateuniversity.com/xmlrpc.php' not found or unable to stat
+[Wed Jul 27 14:34:44.858001 2022] [php7:error] [pid 24003] [client 165.227.73.138:37282] script '/var/www/easternstateuniversity.com/xmlrpc_server.php' not found or unable to stat
+[Wed Jul 27 14:37:21.848275 2022] [php7:notice] [pid 20065] [client 165.227.73.138:47328] PHP Notice:  session_start(): A session had already been started - ignoring in /var/www/easternstateuniversity.com/login.php on line 59
+[Wed Jul 27 14:37:53.690687 2022] [php7:notice] [pid 23695] [client 165.227.73.138:57882] PHP Notice:  session_start(): A session had already been started - ignoring in /var/www/easternstateuniversity.com/login.php on line 59, referer: https://easternstateuniversity.com/login.php
