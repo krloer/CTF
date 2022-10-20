@@ -1,3 +1,6 @@
+# This was stupid
+# Just: https://www.dcode.fr/word-search-solver
+
 f = open("challenge.txt", "r")
 
 i = 0
