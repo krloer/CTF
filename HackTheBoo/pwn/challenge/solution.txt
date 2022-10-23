@@ -1,0 +1,12 @@
+integer overflow makes it easy to subtract to a positive value with buying 1s
+there is no check for coins until after the coins have been subtracted
+Now the problem becomes "buying the laser"
+
+it doesnt actually require us to input item = 2
+and the following instruction shows that our item input * cost is put in eax
+mov    eax,DWORD PTR [rdx+rax*1] -- rdx is our item input * 4, rax is the cost of the item 
+after this, eax is subtracted from ecx and coins is set to ecx
+even if our starting coins are high this sets our balance to 0 before it checks if we have enough for the laser
+
+So if we input 0 as item it will subtract 0 we will still have the high number we got with the overflow
+and since it never verifies the item input we will break out of the loop and get the flag
