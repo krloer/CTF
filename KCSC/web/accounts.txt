@@ -1,0 +1,10 @@
+kcsc
+kcsc123
+ctf
+ctfkcsc
+kcscctf
+kcscctfblob
+ctfkcscblob
+kcscblob
+blobkcsc
+ctfblob
