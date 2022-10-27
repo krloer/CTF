@@ -19,4 +19,6 @@ def access(access_key=None):
     password = str(generate_password)[:-10].encode()
     password = hashlib.md5(password).hexdigest()
 
-    return render_template("restricted.html") if != password else render_template("development.html", flag=flag)
+    return render_template("restricted.html") if access_key != password else render_template("development.html", flag=flag)
+
+# hashlib.md5(b"<function generate_password at 0x7f2").hexdigest()

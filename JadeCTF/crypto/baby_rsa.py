@@ -17,7 +17,7 @@ so m = c^1/e
 e = Decimal(e)
 c = Decimal(c)
 
-getcontext().prec = 1000
+getcontext().prec = 1000 #increase precision - only got the start of the flag without this
 m = pow(c, 1/e)
 m = round(m)
 

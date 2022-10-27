@@ -1,5 +1,3 @@
-
-
 enc = "DL\Ltw?}Pl};ldj}Pbn|{<}r"
 dec = ""
 

