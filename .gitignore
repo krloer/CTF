@@ -1,3 +1,4 @@
 *.out
 *.part
 *.rep
+node_modules/
