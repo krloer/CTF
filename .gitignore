@@ -1,4 +1,5 @@
 *.out
 *.part
 *.rep
+*.gdb_history
 node_modules/
