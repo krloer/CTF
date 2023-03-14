@@ -5,8 +5,6 @@ exe = ELF("./vaccine_patched")
 libc = ELF("./libc.so.6", False)
 ld = ELF("./ld-2.31.so", False)
 
-context.binary = exe
-
 #p = process("./vaccine_patched")
 #gdb.attach(p)
 p = remote("vaccine.chal.ctf.acsc.asia", 1337)

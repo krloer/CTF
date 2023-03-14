@@ -13,3 +13,4 @@ for _ in range(49):
     p.sendline(word)
 
 p.interactive()
+
