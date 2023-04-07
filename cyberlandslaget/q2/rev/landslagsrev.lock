@@ -1,0 +1,9 @@
+#Ghidra Lock File
+#Thu Mar 30 12:16:36 CEST 2023
+OS\ Name=Linux
+OS\ Version=6.0.0-kali6-amd64
+Username=moody
+Hostname=moody
+<META>\ Supports\ File\ Channel\ Locking=Channel Lock
+OS\ Architecture=amd64
+Timestamp=3/30/23, 12\:16 PM

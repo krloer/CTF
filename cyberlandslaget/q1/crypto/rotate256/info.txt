@@ -1,0 +1,11 @@
+The following Python script can encrypt any hexadecimal string into another hexadecimal string, using a secret key.
+When the flag and original key was in the script, it output this:
+
+cdd3c8cee2d9d6dbc8dbd0d5cec6cad0d7cfccd9dac6c8d9ccc6ccc8dae0c6dbd6c6c9d9dcdbccc6cdd6d9cacce4
+
+Can you recover what the original input was?
+
+Starting hints:
+- The real flag should start with "flag{". What is that in hex?
+- You can run Python scripts online here https://replit.com/languages/python3 or download it here https://www.python.org/downloads/
+-- If you are on any modern Linux distro, chances are you already have python3 installed and can run the script like this: `python3 rotate_256.py`

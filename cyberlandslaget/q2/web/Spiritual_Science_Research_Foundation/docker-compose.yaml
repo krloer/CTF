@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  backend-auth:
+    build: ./backend-auth
+    ports:
+      - 4444:80
+    depends_on:
+      - postgress-db
+  postgress-db:
+      build: ./postgres-db/.

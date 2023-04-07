@@ -1,0 +1,8 @@
+Flask
+waitress
+pyotp
+Flask-HTTPAuth
+flask_sqlalchemy
+sqlalchemy
+psycopg2
+sqlalchemy-utils
