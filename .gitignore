@@ -3,3 +3,4 @@
 *.rep
 *.gdb_history
 node_modules/
+venv/
