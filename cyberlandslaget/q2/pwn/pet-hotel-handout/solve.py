@@ -61,7 +61,7 @@ log.info("Placing 8 A's in room 0 and 8 B's in room 1")
 RegisterNewData(0, 10, "A"*8) #creating small chunks to be the same size as the animal chunks
 RegisterNewData(1, 10, "B"*8)
 
-log.info("Deleting room 0 and 1")
+log.info("Deleting data from room 0 and 1")
 DeleteRoom(0)
 DeleteRoom(1)
 
