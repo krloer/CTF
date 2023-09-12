@@ -1,12 +1,17 @@
 from random import * 
 
-def rev_stage1_entry(r):
+def rev_entry(r):
+    flag = list(r)
+    flag.reverse()
+    flag = "".join(x for x in flag) 
+    return flag
+
+def rev_stage1(r):
     r = list(r)
     for i in range(len(r)): 
         r[i] = chr(ord(r[i])^i) 
-    r.reverse()
-    inp = "".join(x for x in r) 
-    return inp
+    r = "".join(x for x in r) 
+    return r
 
 def rev_stage2(r):
     seed(10)
@@ -15,7 +20,7 @@ def rev_stage2(r):
         inp += chr(ord(r[q])+randint(0,5)) 
     return inp
 
-def rev_stage3(r):
+def rev_finalstage(r):
     flag = ""
     i = 0
     while i < len(r): 
@@ -31,9 +36,10 @@ def rev_stage3(r):
     return flag
 
 def rev(r):
-    r = rev_stage3(r)
+    r = rev_finalstage(r)
     r = rev_stage2(r)
-    r = rev_stage1_entry(r)
+    r = rev_stage1(r)
+    r = rev_entry(r)
     print("reversed: " + r)
 
 flag = open('output.txt', 'r').readlines()[0] 
