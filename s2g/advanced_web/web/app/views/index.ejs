@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://unpkg.com/papercss@1.9.2/dist/paper.min.css" />
+  <title>Nonsense</title>
+</head>
+
+<body>
+  <div class="paper container" style="margin-top: 10px;">
+    <h1>Nonsense</h1>
+    <p>Welcome to the page where you can save all your nonsense</p>
+  </div>
+  <div class="paper container" style="margin-top: 10px;">
+    <h2>Add more nonsense</h1>
+      <form method="post" action="/new">
+        <div class="form-group">
+          <textarea id="large-input" placeholder="Your nonsense" name="note"></textarea>
+        </div>
+        <div class="row">
+          <div class="col-6 col">
+            <input type="submit" class="btn-block" value="Submit" />
+          </div>
+        </div>
+      </form>
+  </div>
+  <!-- For note in notes ejs -->
+    <div class="paper container" style="margin-top: 10px;">
+    <% for (var i=0; i < notes.length; i++) { %>
+      <div class="card" style="margin-top: 10px;">
+        <div class="card-body">
+          <p>
+            <%= notes[i].content %>
+          </p>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
