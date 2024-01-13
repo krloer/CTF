@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+}
+form {
+    width: 100%;
+}
+textarea {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 15px;
+}
+ul li {
+    margin: 5px 0;
+}
+ul span.delete {
+    margin-left: 25px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+#recipe-wrapper {
+    display: flex;
+    width: 100%;
+}
+#recipe-wrapper > h2 {
+    margin-bottom: 10px;
+}
+#recipe-wrapper > button {
+    margin-bottom: 25px;
+}
+#recipe-body {
+    width: 100%;
+    text-align: left;
+    margin: 25px 0px;
+}

@@ -1,1 +1,0 @@
-bctf{fake_flag}

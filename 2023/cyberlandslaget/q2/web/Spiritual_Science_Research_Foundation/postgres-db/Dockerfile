@@ -1,0 +1,4 @@
+FROM postgres:latest
+ENV POSTGRES_PASSWORD xxxxxxxxxxxx
+ENV POSTGRES_USER user
+ENV POSTGRES_HOST postgres

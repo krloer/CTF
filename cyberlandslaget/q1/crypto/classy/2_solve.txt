@@ -1,1 +1,0 @@
-You found it! The vigenere cipher is very easy to understand and do by hand, but it was very hard to attack without a key. It took nearly 300 years before someone managed to find an attack. So for the next, and last, cipher that is exactly what you are going to do as well. The cipher is still vigenere, but this time the key is 20 characters long and completely random. Good luck!

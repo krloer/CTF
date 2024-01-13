@@ -1,0 +1,37 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel">
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+  o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s1031" type="#_x0000_t75" style='position:absolute;
+  margin-left:1453.5pt;margin-top:0;width:459pt;height:5.25pt;z-index:1;
+  mso-wrap-style:tight' filled="t" fillcolor="window [65]" stroked="t"
+  strokecolor="windowText [64]" o:insetmode="auto">
+  <v:fill color2="window [65]"/>
+  <v:imagedata o:relid="rId1" o:title=""/>
+  <x:ClientData ObjectType="Pict">
+   <x:SizeWithCells/>
+   <x:Anchor>
+    30, 18, 0, 0, 39, 54, 0, 7</x:Anchor>
+   <x:CF>Pict</x:CF>
+  </x:ClientData>
+ </v:shape></xml>

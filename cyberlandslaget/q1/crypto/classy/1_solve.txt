@@ -1,1 +1,0 @@
-Caesar cipher is indeed the correct cipher in this case. The next cipher was created by Giovan Battista Bellaso almost 500 years ago! For that one you also need a key, which is 'cyberlandslaget'.

@@ -1,0 +1,38 @@
+FROM ubuntu:20.04
+#https://wiki.ubuntu.com/Releases
+
+
+#docker build -t vcs_first.dev - < Dockerfile.dev 
+#docker run --rm -it -p 1024:1024 -v $(pwd):/home/ept vcs_first.dev
+#docker exec -it vcs_first.dev /bin/bash
+
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV RUNNING_IN_DOCKER true
+
+RUN useradd -d /home/ept/ -m -p ept -s /bin/bash ept
+RUN echo "ept:ept" | chpasswd
+
+
+RUN apt update --fix-missing
+RUN apt install -y git gdb git wget patchelf file strace tmux python3 zsh
+RUN apt install -y netcat python3-pip ruby-full  vim xclip elfutils
+RUN apt install -y checksec socat
+
+WORKDIR /opt
+RUN git clone https://github.com/pwndbg/pwndbg
+WORKDIR /opt/pwndbg
+ENV LC_ALL=C.UTF-8
+RUN ./setup.sh
+
+WORKDIR /opt
+RUN wget https://github.com/io12/pwninit/releases/download/3.3.0/pwninit
+RUN chmod +x pwninit
+
+RUN gem install one_gadget
+RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install --upgrade pwntools
+RUN cp /root/.gdbinit /home/ept/
+EXPOSE 1024
+WORKDIR /home/ept
+CMD ["/bin/bash"]
