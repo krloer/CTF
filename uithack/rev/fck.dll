@@ -1,0 +1,69 @@
+// Program
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.CompilerServices;
+using Microsoft.FSharp.Collections;
+using Microsoft.FSharp.Core;
+
+[CompilationMapping(/*Could not decode attribute arguments.*/)]
+public static class Program
+{
+	[Serializable]
+	internal sealed class flag@13 : FSharpFunc<char, char>
+	{
+		internal static readonly flag@13 @_instance = new flag@13();
+
+		[CompilerGenerated]
+		[DebuggerNonUserCode]
+		internal flag@13()
+		{
+		}
+
+		public override char Invoke(char c) 
+		{
+			return (char)(c - 1);               # return en char en lavere enn input
+		}
+	}
+
+	[Serializable]
+	internal sealed class flag@12-1 : FSharpFunc<char, char>
+	{
+		internal static readonly flag@12-1 @_instance = new flag@12-1();
+
+		[CompilerGenerated]
+		[DebuggerNonUserCode]
+		internal flag@12-1()
+		{
+		}
+
+		public override char Invoke(char c)
+		{
+			return (char)(c + 1);                   # return en char en høyere enn input
+		}
+	}
+
+	[EntryPoint]
+	public static int main(string[] args)
+	{
+		int num = args.Length;
+		if (num < 1)
+		{
+			PrintfFormat<FSharpFunc<int, Unit>, TextWriter, Unit, Unit> val = (PrintfFormat<FSharpFunc<int, Unit>, TextWriter, Unit, Unit>)(object)new PrintfFormat<FSharpFunc<int, Unit>, TextWriter, Unit, Unit, int>("Expected at least one argument, got %i.");
+			PrintfModule.PrintFormatLineToTextWriter<FSharpFunc<int, Unit>>(Console.Out, val).Invoke(args.Length);
+		}
+		else
+		{
+			string a = ArrayModule.Head<string>(args);
+			char[] array = "lano!tkc@f".ToCharArray();
+			string text = new string(ArrayModule.Reverse<char>(ArrayModule.OfSeq<char>(SeqModule.Map<char, char>((FSharpFunc<char, char>)flag@13.@_instance, SeqModule.Map<char, char>((FSharpFunc<char, char>)flag@12-1.@_instance, (IEnumerable<char>)array)))));
+			if (string.Equals(a, "D2005S"))
+			{
+				PrintfFormat<FSharpFunc<string, Unit>, TextWriter, Unit, Unit> val2 = (PrintfFormat<FSharpFunc<string, Unit>, TextWriter, Unit, Unit>)(object)new PrintfFormat<FSharpFunc<string, Unit>, TextWriter, Unit, Unit, string>("UiTHack24{%s}");
+				PrintfModule.PrintFormatLineToTextWriter<FSharpFunc<string, Unit>>(Console.Out, val2).Invoke(text);
+			}
+		}
+		return 0;
+	}
+}
