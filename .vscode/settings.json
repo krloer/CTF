@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "istream": "cpp",
-        "random": "c"
+        "random": "c",
+        "stdio.h": "c",
+        "functional": "c",
+        "chrono": "c",
+        "ratio": "c",
+        "cstdint": "c"
     }
 }
